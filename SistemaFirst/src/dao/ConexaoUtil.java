@@ -1,6 +1,8 @@
 package dao;
 
+import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class ConexaoUtil {
 
@@ -22,14 +24,20 @@ public class ConexaoUtil {
         }
     }
 
-    public void Conn() {
-        try {
+    public Connection Conn() throws ClassNotFoundException, SQLException{
+        Class.forName("com.mysql.jdbc.Driver");
+        System.out.println("CONECTADO COM SUCESSO!");
+        return DriverManager.getConnection(URL, usuario, senha);
+           
+           
+        /* try {
             Class.forName("com.mysql.jdbc.Driver");
             DriverManager.getConnection(URL, usuario, senha);
             System.out.println("CONECTADO COM SUCESSO!");
         } catch (Exception ex) {
             System.err.println("ERRO AO CONECTAR COM O BD: \n" + ex);
         }
+*/
     }
 
 }
