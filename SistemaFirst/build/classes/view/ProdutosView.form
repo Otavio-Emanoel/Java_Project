@@ -41,11 +41,8 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="5" max="32767" attributes="0"/>
-                          <Component id="jScrollPane1" min="-2" pref="375" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="jPanel2" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -83,11 +80,11 @@
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="salvarBtn" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                              <Component id="atualizarBtn" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                              <Component id="apagarBtn" min="-2" max="-2" attributes="0"/>
+                              <Component id="salvarBtn" min="-2" pref="89" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="atualizarBtn" min="-2" pref="92" max="-2" attributes="0"/>
+                              <EmptySpace pref="44" max="32767" attributes="0"/>
+                              <Component id="apagarBtn" min="-2" pref="89" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -97,7 +94,6 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="tipoCmbx" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Component id="preco" min="-2" pref="111" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -106,6 +102,7 @@
                                       <Component id="peso" max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="nomeTxt" max="32767" attributes="0"/>
+                                  <Component id="tipoCmbx" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>

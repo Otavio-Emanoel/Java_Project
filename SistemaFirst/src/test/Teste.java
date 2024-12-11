@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 public class Teste {
     public static void main(String args[]){
         try {
-            ProdutoDAO.read();
+            ProdutoDAO.create();
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Teste.class.getName()).log(Level.SEVERE, null, ex);
         }

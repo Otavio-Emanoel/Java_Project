@@ -29,15 +29,6 @@ public class ConexaoUtil {
         System.out.println("CONECTADO COM SUCESSO!");
         return DriverManager.getConnection(URL, usuario, senha);
            
-           
-        /* try {
-            Class.forName("com.mysql.jdbc.Driver");
-            DriverManager.getConnection(URL, usuario, senha);
-            System.out.println("CONECTADO COM SUCESSO!");
-        } catch (Exception ex) {
-            System.err.println("ERRO AO CONECTAR COM O BD: \n" + ex);
-        }
-*/
     }
 
 }
