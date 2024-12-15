@@ -5,6 +5,11 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Aluno
@@ -50,14 +55,17 @@ public class ProdutosView extends javax.swing.JFrame {
 
         salvarBtn.setBackground(new java.awt.Color(255, 255, 255));
         salvarBtn.setFont(new java.awt.Font("Adobe Gothic Std B", 0, 11)); // NOI18N
+        salvarBtn.setForeground(new java.awt.Color(0, 0, 0));
         salvarBtn.setText("Salvar");
 
         atualizarBtn.setBackground(new java.awt.Color(255, 255, 255));
         atualizarBtn.setFont(new java.awt.Font("Adobe Gothic Std B", 0, 11)); // NOI18N
+        atualizarBtn.setForeground(new java.awt.Color(0, 0, 0));
         atualizarBtn.setText("Atualizar");
 
         apagarBtn.setBackground(new java.awt.Color(255, 255, 255));
         apagarBtn.setFont(new java.awt.Font("Adobe Gothic Std B", 0, 11)); // NOI18N
+        apagarBtn.setForeground(new java.awt.Color(0, 0, 0));
         apagarBtn.setText("Apagar");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -74,7 +82,7 @@ public class ProdutosView extends javax.swing.JFrame {
 
         tipoCmbx.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tipoCmbx.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sólido", "Liquido" }));
-        tipoCmbx.setCursor(new java.awt.Cursor(java.awt.Cursor.E_RESIZE_CURSOR));
+        tipoCmbx.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -124,10 +132,10 @@ public class ProdutosView extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addComponent(preco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(peso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE))
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tipoCmbx, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                    .addComponent(tipoCmbx)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
@@ -188,37 +196,7 @@ public class ProdutosView extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ProdutosView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ProdutosView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ProdutosView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ProdutosView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ProdutosView().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton apagarBtn;
@@ -237,4 +215,36 @@ public class ProdutosView extends javax.swing.JFrame {
     private javax.swing.JButton salvarBtn;
     private javax.swing.JComboBox tipoCmbx;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getApagarBtn() {
+        return apagarBtn;
+    }
+
+    public JButton getAtualizarBtn() {
+        return atualizarBtn;
+    }
+
+    public JTextField getNomeTxt() {
+        return nomeTxt;
+    }
+
+    public JTextField getPeso() {
+        return peso;
+    }
+
+    public JTextField getPreco() {
+        return preco;
+    }
+
+    public JTable getProdutosTb() {
+        return produtosTb;
+    }
+
+    public JButton getSalvarBtn() {
+        return salvarBtn;
+    }
+
+    public JComboBox getTipoCmbx() {
+        return tipoCmbx;
+    }
 }
