@@ -13,6 +13,10 @@ public class Teste {
         ProdutoControl produtoControl = new ProdutoControl();
         try {
             produtoControl.addNaTabela();
+            produtoControl.novoProduto();
+            produtoControl.selecionarProduto();
+            produtoControl.atualizarProduto();
+            produtoControl.removerProduto();
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(Teste.class.getName()).log(Level.SEVERE, null, ex);
         }

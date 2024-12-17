@@ -10,12 +10,17 @@ import model.ProdutoLiquido;
 import model.ProdutoSolido;
 
 public class ProdutoDAO {
-    public static void create() throws ClassNotFoundException, SQLException{
+    public static void create(Produto produto) throws ClassNotFoundException, SQLException{
         Connection con;
         con = ConexaoUtil.getConnection().Conn();
-        String query = "INSERT INTO produtos (nome, preco, medida, tipo) VALUES ('leite','25.00','1.0','Solido')";
+        String query = "INSERT INTO produtos (nome, preco, medida, tipo)" 
+                + " VALUES (?,?,?,?)";
         
         PreparedStatement stmt = con.prepareStatement(query);
+        stmt.setString(1, produto.getNome());
+        stmt.setDouble(2, produto.getPreco());
+        stmt.setFloat(3, produto.getMedida());
+        stmt.setString(4, produto.getTipo());
         
         stmt.execute();
         con.close();
@@ -53,25 +58,35 @@ public class ProdutoDAO {
         return listaDeProdutos;
     }
     
-    public static void update() throws ClassNotFoundException, SQLException{
+    public static void update(Produto produto) throws ClassNotFoundException, SQLException{
         Connection con;
         con = ConexaoUtil.getConnection().Conn();
         String query = "UPDATE produtos SET"
-                + " nome = 'Sabao',"
-                + " preco = 1.20,"
-                + " medida = 400.0,"
-                + " tipo = 'solido'"
-                + " WHERE ID_produto = 2";
+                + " nome = ?,"
+                + " preco = ?,"
+                + " medida = ?,"
+                + " tipo = ?"
+                + " WHERE ID_produto = ?";
         PreparedStatement stmt = con.prepareStatement(query);
+        
+        stmt.setString(1, produto.getNome());
+        stmt.setDouble(2, produto.getPreco());
+        stmt.setFloat(3, produto.getMedida());
+        stmt.setString(4, produto.getTipo());
+        stmt.setInt(5, produto.getId());
+        
         stmt.execute();
         con.close();
     }
     
-    public static void delete() throws ClassNotFoundException, SQLException{
+    public static void delete(int id) throws ClassNotFoundException, SQLException{
         Connection con;
         con = ConexaoUtil.getConnection().Conn();
-        String query = "DELETE FROM produtos WHERE ID_produto = 2";
+        String query = "DELETE FROM produtos WHERE ID_produto = ?";
         PreparedStatement stmt = con.prepareStatement(query);
+        
+        stmt.setInt(1, id);
+        
         stmt.execute();
         con.close();
     }

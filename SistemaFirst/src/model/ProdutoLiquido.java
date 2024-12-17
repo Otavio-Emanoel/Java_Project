@@ -13,7 +13,14 @@ public class ProdutoLiquido extends Produto{
 
     @Override
     public void setPreco(double valorOriginal){
-        valorCalculado = valorOriginal + (valorOriginal * 0.10);
+        valorCalculado = (valorOriginal * 0.10) + valorOriginal;
+    }
+    
+    @Override
+    public void setPreco(double valorOriginal, boolean diferencial){
+        if(diferencial == true){
+            valorCalculado = valorOriginal;
+        }
     }
     
     @Override

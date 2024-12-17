@@ -12,6 +12,7 @@ public abstract class Produto {
     }
     public abstract double getPreco();
     public abstract void setPreco(double valorOriginal);
+    public abstract void setPreco(double valorOriginal, boolean diferencial);
     public abstract String getTipo();
 
     public int getId() {
